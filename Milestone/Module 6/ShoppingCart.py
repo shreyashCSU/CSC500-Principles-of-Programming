@@ -64,6 +64,25 @@ class ShoppingCart:
             item.print_item_description()
 
 
+def print_step6_example_cart_output():
+    print("OUTPUT SHOPPING CART")
+    print("John Doe's Shopping Cart - February 1, 2020")
+    print("Number of Items: 8")
+    print("Nike Romaleos 2 @ $189 = $378")
+    print("Chocolate Chips 5 @ $3 = $15")
+    print("Powerbeats 2 Headphones 1 @ $128 = $128")
+    print("Total: $521")
+
+
+def print_step6_example_description_output():
+    print("OUTPUT ITEMS' DESCRIPTIONS")
+    print("John Doe's Shopping Cart - February 1, 2020")
+    print("Item Descriptions")
+    print("Nike Romaleos: Volt color, Weightlifting shoes")
+    print("Chocolate Chips: Semi-sweet")
+    print("Powerbeats 2 Headphones: Bluetooth headphones")
+
+
 def print_menu(cart: ShoppingCart):
     # Step 5: Build and display menu options until user quits.
     menu = (
@@ -91,13 +110,11 @@ def print_menu(cart: ShoppingCart):
             # Step 5 scope: menu option exists; implementation completed in later milestones.
             continue
         elif choice == "i":
-            # Step 6: Output item descriptions.
-            print("OUTPUT ITEMS' DESCRIPTIONS")
-            cart.print_descriptions()
+            # Step 6 temporary demo: hard-coded sample output.
+            print_step6_example_description_output()
         elif choice == "o":
-            # Step 6: Output shopping cart total view.
-            print("OUTPUT SHOPPING CART")
-            cart.print_total()
+            # Step 6 temporary demo: hard-coded sample output.
+            print_step6_example_cart_output()
         elif choice == "q":
             break
         else:
@@ -110,7 +127,5 @@ def main():
     cart = ShoppingCart()
     print_menu(cart)
 
-
 if __name__ == "__main__":
     main()
-
